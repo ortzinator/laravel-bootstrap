@@ -11,7 +11,10 @@ Route::controller( $urlSegment.'/galleries' , 'Davzie\LaravelBootstrap\Controlle
 Route::controller( $urlSegment.'/settings'  , 'Davzie\LaravelBootstrap\Controllers\SettingsController' );
 Route::controller( $urlSegment.'/blocks'    , 'Davzie\LaravelBootstrap\Controllers\BlocksController' );
 Route::controller( $urlSegment.'/posts'     , 'Davzie\LaravelBootstrap\Controllers\PostsController' );
-Route::controller( $urlSegment              , 'Davzie\LaravelBootstrap\Controllers\DashController'  );
+Route::get( $urlSegment                     , 'Davzie\LaravelBootstrap\Controllers\DashController@getIndex'  );
+Route::get( $urlSegment.'/logout'           , 'Davzie\LaravelBootstrap\Controllers\DashController@getLogout'  );
+Route::get( $urlSegment.'/login'            , 'Davzie\LaravelBootstrap\Controllers\DashController@getLogin'  );
+Route::post( $urlSegment.'/login'           , 'Davzie\LaravelBootstrap\Controllers\DashController@postLogin'  );
 
 /** Include IOC Bindings **/
 include __DIR__.'/bindings.php';
