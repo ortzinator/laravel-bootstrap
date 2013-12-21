@@ -16,4 +16,8 @@ class BlocksRepository extends EloquentBaseRepository implements BlocksInterface
         $this->model = $blocks;
     }
 
+    public function getByKey( $key ){
+        return $this->model->where('key',$key)->first();
+    }
+
 }
