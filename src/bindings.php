@@ -1,36 +1,22 @@
 <?php
 
 // The Posts Bindings
-App::bind('Davzie\LaravelBootstrap\Posts\PostsInterface', function(){
-    return new Davzie\LaravelBootstrap\Posts\PostsRepository( new Davzie\LaravelBootstrap\Posts\Posts );
-});
+App::bind('Davzie\LaravelBootstrap\Posts\PostsInterface', 'Davzie\LaravelBootstrap\Posts\PostsRepository' );
 
 // The Posts Bindings
-App::bind('Davzie\LaravelBootstrap\Accounts\UserInterface', function(){
-    return new Davzie\LaravelBootstrap\Accounts\UserRepository( new Davzie\LaravelBootstrap\Accounts\User );
-});
+App::bind('Davzie\LaravelBootstrap\Accounts\UserInterface', 'Davzie\LaravelBootstrap\Accounts\UserRepository');
 
 // The Settings Bindings
-App::bind('Davzie\LaravelBootstrap\Settings\SettingsInterface', function(){
-    return new Davzie\LaravelBootstrap\Settings\SettingsRepository( new Davzie\LaravelBootstrap\Settings\Settings );
-});
+App::bind('Davzie\LaravelBootstrap\Settings\SettingsInterface', 'Davzie\LaravelBootstrap\Settings\SettingsRepository');
 
 // The Blocks Bindings
-App::bind('Davzie\LaravelBootstrap\Blocks\BlocksInterface', function(){
-    return new Davzie\LaravelBootstrap\Blocks\BlocksRepository( new Davzie\LaravelBootstrap\Blocks\Blocks );
-});
+App::bind('Davzie\LaravelBootstrap\Blocks\BlocksInterface', 'Davzie\LaravelBootstrap\Blocks\BlocksRepository');
 
 // The Tags Bindings
-App::bind('Davzie\LaravelBootstrap\Tags\TagsInterface', function(){
-    return new Davzie\LaravelBootstrap\Tags\TagsRepository( new Davzie\LaravelBootstrap\Tags\Tags );
-});
+App::bind('Davzie\LaravelBootstrap\Tags\TagsInterface', 'Davzie\LaravelBootstrap\Tags\TagsRepository');
 
 // The Uploads Bindings
-App::bind('Davzie\LaravelBootstrap\Uploads\UploadsInterface', function(){
-    return new Davzie\LaravelBootstrap\Uploads\UploadsRepository( new Davzie\LaravelBootstrap\Uploads\Uploads );
-});
+App::bind('Davzie\LaravelBootstrap\Uploads\UploadsInterface', 'Davzie\LaravelBootstrap\Uploads\UploadsRepository');
 
 // The Uploads Bindings
-App::bind('Davzie\LaravelBootstrap\Galleries\GalleriesInterface', function(){
-    return new Davzie\LaravelBootstrap\Galleries\GalleriesRepository( new Davzie\LaravelBootstrap\Galleries\Galleries );
-});
+App::bind('Davzie\LaravelBootstrap\Galleries\GalleriesInterface', 'Davzie\LaravelBootstrap\Galleries\GalleriesRepository');
